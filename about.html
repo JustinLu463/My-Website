@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<link rel="icon" href="pictures\JustinCentral.jpg">
+<html>
+<head>
+    <title>About</title>
+    <link rel="stylesheet" type="text/css" href="details.css">
+    <div id="fireflies"></div>
+</head>
+<body>
+
+    <h1 id="main-title">
+        <span>A</span><span>b</span><span>o</span><span>u</span><span>t</span>
+    </h1>
+
+    <div class="social-links">
+        <a href="https://github.com/JustinLu463" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/justinchuanlu/" target="_blank">LinkedIn</a>
+    </div>
+    
+    <div class="back-to-home">
+        <a href="index.html">Home Page</a>
+    </div>
+
+    <div class="image-section">
+        <a>
+            <img src="pictures\waterPic.jpg" alt="beach" onclick="openModal(this.src)">
+        </a>
+        <a>
+            <img src="pictures\gf.jpg" alt="gf" onclick="openModal(this.src)">
+        </a>
+        <a>
+            <img src="pictures\mall.jpg" alt="gf" onclick="openModal(this.src)">
+        </a>
+        <a>
+            <img src="pictures\dinner.JPG" alt="dinner" onclick="openModal(this.src)">
+        </a>
+    </div>
+
+    <div class="text-section">
+        <h2>Hello There! I'm Justin</h2>
+        <p>
+            I'm a passionate and dedicated fourth-year student majoring in Computer Science. I love coding and figuring out difficult problems, and I'm always looking for ways to improve my abilities and knowledge in the subject. Along with my academic interests, I enjoy going to the gym frequently since I believe that an active lifestyle has both physical and mental advantages.
+        </p>
+        <p>
+            I believe that life is about finding balance, and nothing makes me happier than spending time with my loved ones. Sharing laughs, having deep discussions, and making memories that last are all priceless to me.
+        </p>
+        <p> 
+            My main areas of interest include software development, cybersecurity, and information technologies because I have a strong interest in technology. The continually changing nature of these sectors fascinates me, and I make it a point to keep up with new developments and best practices. I'm continuously inspired by how technology has the power to change the future and enhance people's lives as I explore deeper into the complex realm of programming.
+        </p>
+    </div>
+
+    <div class="image-section">
+        <a>
+            <img src="pictures\rainbow6.jpg" alt="R6" onclick="openModal(this.src)">
+        </a>
+        <a>
+            <img src="pictures\courtland.jpg" alt="broncos 14" onclick="openModal(this.src)">
+        </a>
+        <a>
+            <img src="pictures\lotr.jpg" alt="lord of the rings" onclick="openModal(this.src)">
+        </a>
+        <a>
+            <img src="pictures\bridgeView.jpg" alt="view from bridge" onclick="openModal(this.src)">
+        </a>
+    </div>
+
+    <div id="imageModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

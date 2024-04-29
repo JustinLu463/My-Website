@@ -1,0 +1,257 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(5, 1, 10);
+    overflow: hidden;
+    color: white;
+    font-family: Arial, sans-serif;
+    padding-bottom: 10px;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%; /* Ensures that the body is at least as tall as the viewport */
+}
+
+.container {
+    /* If you have fixed height styles, they might need to be adjusted */
+    min-height: 100%; /* This ensures that the container can grow */
+}
+
+body, .container {
+    overflow: visible; /* Default value that allows for scrolling */
+}
+
+.extra-space {
+    height: 2000px; /* Example fixed height to enable scrolling */
+}
+
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+#main-title {
+    text-align: center;
+    font-size: 6em;
+    margin-top: 100px;
+    color: rgb(255, 255, 255);
+}
+
+/* CSS for firefly styling */
+.firefly {
+    background: radial-gradient(circle, yellow, transparent); /* Firefly glow */
+    position: absolute;
+    border-radius: 50%; /* Circular fireflies */
+    opacity: 0.8; /* Slight transparency for realism */
+    animation-name: hoverFirefly; /* Keyframe animation */
+    animation-timing-function: ease-in-out; /* Smooth transitions */
+    animation-iteration-count: infinite; /* Infinite animation */
+}
+
+/* Keyframes for firefly movement with hovering effect */
+@keyframes hoverFirefly {
+    0% {
+        transform: translate(0, 0); /* Start at the initial position */
+    }
+    25% {
+        transform: translate(10vw, 10vh); /* Small area of movement */
+    }
+    50% {
+        transform: translate(-10vw, -10vh); /* Randomized direction */
+    }
+    75% {
+        transform: translate(5vw, -5vh); /* Randomized direction */
+    }
+    100% {
+        transform: translate(0, 0); /* Return to the start */
+    }
+}
+
+/* Fireflies container to prevent scrollbars */
+#fireflies {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    overflow: hidden; /* Prevents scrollbars from appearing */
+}
+
+
+
+.back-to-home {
+    text-align: center;
+    margin-top: 30px; /* Add some space above the button */
+}
+
+.social-links {
+    text-align: center;
+    margin: 20px 0;
+}
+
+
+.social-links a, .back-to-home a {
+    margin: 0 10px;
+    color: white; /* Or any color you prefer for the text */
+    text-decoration: none;
+    font-size: 1.5em; /* Adjust size as needed */
+    font-weight: bold; /* Makes the text bold */
+    background-color: #333; /* Button background color */
+    padding: 10px 20px; /* Button padding */
+    border-radius: 5px; /* Rounded corners for the button */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.social-links a:hover, .back-to-home a:hover {
+    text-decoration: underline; /* Underline text links on hover */
+    background-color: #555; /* Darker background on hover for the button */
+}
+
+.social-links span {
+    margin: 0 5px; /* Adjust spacing around the pipe symbol */
+    color: white; /* Or any color you prefer */
+    font-weight: bold
+    /* Add other styles if needed */
+}
+
+.image-section {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    flex-wrap: wrap; /* Allows elements to wrap in smaller screens */
+    /* margin-bottom: 50px; */
+    /* padding-bottom: 50px; */
+}
+
+.image-section a {
+    margin: 20px;
+    text-decoration: none;
+    color: white; /* Or any color you prefer for the text */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+    display: inline-block; /* Allows transformation of inline elements */
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); Optional: adds shadow for depth */
+}
+
+.image-section a:hover {
+    transform: scale(1.1); /* Enlarge on hover */
+    /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.7); Optional: enhances shadow on hover */
+}
+
+.image-section img {
+    width: 300px; /* Adjust the size as needed */
+    height: auto;
+    border-radius: 10px; /* Optional for rounded corners */
+}
+
+.image-section p {
+    margin-top: 10px;
+    font-size: 1.5em; /* Larger text */
+    text-align: center;
+}
+
+.text-section {
+    max-width: 800px; /* Or whatever maximum width you prefer */
+    margin: 0 auto; /* This centers the text section */
+    padding: 20px; /* Add some padding around the text */
+    text-align: center; /* Center the text if you prefer */
+    margin-bottom: 20px
+}
+
+.text-section h2 {
+    font-size: 2em; /* Larger font size for headings */
+    margin-bottom: 0.5em; /* Spacing below the heading */
+}
+
+.text-section p {
+    font-size: 1em; /* Paragraph font size, adjust as needed */
+    line-height: 1.6; /* Line height for better readability */
+    margin-bottom: 1em; /* Spacing between paragraphs */
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.9); /* Black background with opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 30%;
+    max-width: 700px; /* Adjust this value as per your requirement */
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Add animation for opening the modal */
+.modal-content, .close {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+
+
+.project-image {
+    margin-right: 20px;
+    flex-shrink: 0; /* Prevents the image from shrinking */
+}
+
+.project-image img {
+    width: 300px; /* Adjust as needed */
+    height: auto;
+    border-radius: 10px; /* Optional for style */
+    display: block; /* Ensures the image does not have extra space around it */
+}
+
+.project-description {
+    max-width: 600px; /* Adjust as needed */
+    padding: 10px;
+    text-align: left; /* Align the text to the left within the description box */
+}
+
+.project-title {
+    max-width: 600px;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Center the entire project container */
+.project-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+
